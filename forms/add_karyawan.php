@@ -7,13 +7,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $alamat        = $_POST['alamat'];
     $divisi        = $_POST['divisi'];
     $umur          = $_POST['umur'];
+    $status        = $_POST['status'];
     $id_jabatan    = $_POST['id_jabatan'];
     $id_rating     = $_POST['id_rating'];
     $created_at    = date('Y-m-d');
 
-    // Simpan ke database
-    $query = "INSERT INTO karyawan (nama, jenis_kelamin, alamat, divisi, umur, id_jabatan, id_rating, created_at)
-              VALUES ('$nama', '$jenis_kelamin', '$alamat', '$divisi', '$umur', '$id_jabatan', '$id_rating', '$created_at')";
+$query = "INSERT INTO karyawan (nama, jenis_kelamin, alamat, divisi, status, umur, id_jabatan, id_rating, created_at)
+          VALUES ('$nama', '$jenis_kelamin', '$alamat', '$divisi', '$status', '$umur', '$id_jabatan', '$id_rating', '$created_at')";
+
 
     if (mysqli_query($conn, $query)) {
         header("Location: ../index.php?page=karyawan");
@@ -33,7 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 </head>
 <body class="bg-light">
 <div class="container mt-5">
-  <h3 class="mb-4 text-center text-primary fw-bold">Form Tambah Karyawan</h3>
+  <h3 class="mb-4 text-center text-primary fw-bold">Tambah Karyawan</h3>
 
   <form method="POST" class="card p-4 shadow-sm">
     <div class="mb-3">
@@ -57,6 +58,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <div class="mb-3">
       <label class="form-label">Divisi</label>
       <input type="text" name="divisi" class="form-control" required>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Status</label>
+      <input type="text" name="status" class="form-control" required>
     </div>
 
     <div class="mb-3">

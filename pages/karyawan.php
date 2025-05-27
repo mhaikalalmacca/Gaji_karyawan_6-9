@@ -45,7 +45,7 @@ function generateStars($count) {
   <div class="container mt-4">
     <div class="d-flex justify-content-between align-items-center mb-4">
       <h2>Daftar Karyawan</h2>
-      <a href="forms/add_karyawan.php" class="btn btn-success">+ Tambah Karyawan</a>
+      <a href="forms/add_karyawan.php" class="btn btn-primary">+ Tambah Karyawan</a>
     </div>
 
     <div class="row">
@@ -73,6 +73,7 @@ function generateStars($count) {
     </div>
   </div>
 </div>
+
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
 </body>

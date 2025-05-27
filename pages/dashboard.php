@@ -1,6 +1,5 @@
 <?php
 include 'config/koneksi.php';
-session_start();
 $nama_user = $_SESSION['nama'] ?? 'User';
 
 // Ambil total data
@@ -112,6 +111,7 @@ function generateStars($count) {
     </div>
   </div>
 </div>
+<?php include __DIR__ . '/../includes/footer.php'; ?>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
 </body>

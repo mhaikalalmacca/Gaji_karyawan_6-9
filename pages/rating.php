@@ -15,7 +15,7 @@ include 'config/koneksi.php';
         
 <h2>Daftar Rating</h2>
 
-<a href="../forms/add_jabatan.php"><button class="btn btn-primary" type="button" >+ Tambah Rating</button></a>
+<a href="../forms/add_rating.php"><button class="btn btn-primary" type="button" >+ Tambah Rating</button></a>
 <br><br>
 <table border="1" cellpadding="10" cellspacing="0" class="table text-center table-bordered table-hover">
     <tr class="table-dark">

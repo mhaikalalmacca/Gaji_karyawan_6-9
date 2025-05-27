@@ -15,12 +15,12 @@ include 'config/koneksi.php';
         
 <h2>Tarif Lembur</h2>
 
-<a href="../forms/add_jabatan.php"><button class="btn btn-primary" type="button" >+ Tambah Tarif Lembur</button></a>
+<a href="../forms/add_lembur.php"><button class="btn btn-primary" type="button" >+ Tambah Tarif Lembur</button></a>
 <br><br>
 <table border="1" cellpadding="10" cellspacing="0" class="table text-center table-bordered table-hover">
     <tr class="table-dark">
         <th>No</th>
-        <th>Jabatan</th>
+        <th>ID Jabatan</th>
         <th>Tarif</th>
         <th>Aksi</th>
     </tr>

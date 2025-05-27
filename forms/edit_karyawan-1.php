@@ -56,7 +56,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </head>
 <body class="bg-light">
 <div class="container mt-5">
-  <h3 class="mb-4 text-center text-primary fw-bold">Form Edit Karyawan</h3>
+  <h3 class="mb-4 text-center text-primary fw-bold">Edit Karyawan</h3>
 
   <form method="POST" class="card p-4 shadow-sm">
     <div class="mb-3">
@@ -119,8 +119,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </div>
 
     <div class="d-grid">
-      <button type="submit" class="btn btn-success">Update</button>
-      <a href="../index.php?page=karyawan" class="btn btn-secondary mt-2">Kembali</a>
+      <button type="submit" class="btn btn-primary">Update</button>
+      <a href="../index.php?page=dashboard" class="btn btn-secondary mt-2">Kembali</a>
     </div>
   </form>
 </div>
