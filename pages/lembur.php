@@ -2,16 +2,6 @@
 include 'config/koneksi.php';
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-<?php include 'includes/sidebar.php'; ?>    
-<div class="main-content" style="margin-left: 250px; padding: 20px;">
         
 <h2>Tarif Lembur</h2>
 
@@ -33,19 +23,20 @@ include 'config/koneksi.php';
                 <td>" . number_format($data['id_jabatan']) . "</td>
                 <td>" . number_format($data['tarif']) ."</td>
                 <td>
-                    <div class='d-flex justify-content-center'>
-                    <a href='forms/detail_lembur.php?id={$data['id']}'><button class='btn btn-info btn-sm me-3 px-4' type='button' style='min-width: 80px;'>Detail</button></a> 
-                        <a href='forms/edit_lembur.php?id={$data['id']}'><button class='btn btn-warning btn-sm me-3 px-4' type='button' style='min-width: 80px;'>Edit</button></a> 
-                        <a href='forms/hapus_lembur.php?id={$data['id']}' onclick=\"return confirm('Yakin hapus?')\"><button class='btn btn-danger btn-sm px-4' type='button' style='min-width: 80px;'>Hapus</button></a>
+                    <div class='d-flex justify-content-center flex-wrap gap-2'>
+                        <a href='forms/detail_lembur.php?id={$data['id']}'>
+                            <button class='btn btn-info btn-sm px-3' type='button'>Detail</button>
+                        </a> 
+                        <a href='forms/edit_lembur.php?id={$data['id']}'>
+                            <button class='btn btn-warning btn-sm px-3' type='button'>Edit</button>
+                        </a> 
+                        <a href='forms/hapus_lembur.php?id={$data['id']}' onclick=\"return confirm('Yakin hapus?')\">
+                            <button class='btn btn-danger btn-sm px-3' type='button'>Hapus</button>
+                        </a>
                     </div>
-                    
                 </td>
               </tr>";
         $no++;
     }
     ?>
 </table>
-</div>
-
-</body>
-</html>

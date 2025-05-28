@@ -25,28 +25,7 @@ function generateStars($count) {
   return $stars ?: '-';
 }
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Dashboard</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <style>
-    body {
-      margin: 0;
-    }
-    .main-content {
-      margin-left: 250px; /* sidebar width */
-      padding: 20px;
-    }
-    .star-rating {
-      font-size: 1.2rem;
-      color: #f39c12;
-    }
-  </style>
-</head>
 <body>
-<?php include 'includes/sidebar.php'; ?>
 
 <div class="main-content">
   <div class="container">
@@ -61,21 +40,21 @@ function generateStars($count) {
 
     <!-- Total Summary -->
     <div class="row mb-4 text-white">
-      <div class="col-md-4">
+      <div class="col-md-4 mb-3">
         <div class="bg-primary p-4 rounded text-center">
           <i class="bi bi-people fs-2"></i>
           <h5>Total Karyawan</h5>
           <h2><?= $total_karyawan ?></h2>
         </div>
       </div>
-      <div class="col-md-4">
+      <div class="col-md-4 mb-3">
         <div class="bg-success p-4 rounded text-center">
           <i class="bi bi-briefcase fs-2"></i>
           <h5>Total Jabatan</h5>
           <h2><?= $total_jabatan ?></h2>
         </div>
       </div>
-      <div class="col-md-4">
+      <div class="col-md-4 mb-3">
         <div class="bg-dark p-4 rounded text-center">
           <i class="bi bi-star fs-2"></i>
           <h5>Total Rating</h5>
@@ -83,6 +62,7 @@ function generateStars($count) {
         </div>
       </div>
     </div>
+
 
     <!-- Karyawan Terbaru -->
     <h3 class="mb-3">Karyawan Terbaru</h3>
@@ -111,8 +91,3 @@ function generateStars($count) {
     </div>
   </div>
 </div>
-<?php include __DIR__ . '/../includes/footer.php'; ?>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>

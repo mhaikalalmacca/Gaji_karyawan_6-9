@@ -2,17 +2,6 @@
 $current_page = isset($_GET['page']) ? $_GET['page'] : 'dashboard';
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sidebar</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
-</head>
-<body>
-
 <div class="d-none d-md-block position-fixed top-0 start-0 vh-100 bg-dark text-white p-3" style="width: 250px; z-index: 1030;">
   <a href="?page=dashboard" class="d-flex align-items-center mb-3 text-white text-decoration-none">
     <img src="assets/image/orcass.png" alt="Logo" width="50" class="me-2 rounded-circle">
@@ -61,7 +50,6 @@ $current_page = isset($_GET['page']) ? $_GET['page'] : 'dashboard';
   </div>
   <div class="offcanvas-body">
     <ul class="nav nav-pills flex-column gap-2">
-      <!-- Sama seperti isi sidebar -->
       <li class="nav-item">
         <a href="?page=dashboard" class="nav-link <?= ($current_page == 'dashboard') ? 'active bg-primary text-white' : 'text-white'; ?>">
           <i class="bi bi-speedometer2 me-2"></i>Dashboard
@@ -95,6 +83,3 @@ $current_page = isset($_GET['page']) ? $_GET['page'] : 'dashboard';
     </ul>
   </div>
 </div>
-
-</body>
-</html>
