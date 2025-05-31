@@ -46,7 +46,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </head>
 <body class="bg-light">
 <div class="container mt-5">
-  <h3 class="mb-4 text-center text-Primary fw-bold">Edit Jabatan</h3>
+  <h3 class="mb-4 text-center text-primary fw-bold">Edit Jabatan</h3>
 
   <form method="POST" class="card p-4 shadow-sm">
     <div class="mb-3">

@@ -45,9 +45,9 @@ function generateStars($count) {
           <strong><p class="card-text"><?= htmlspecialchars($row['nama_jabatan']) ?></p></strong>
         </div>
         <div class="card-footer d-flex justify-content-between">
-          <a href="forms/detail_karyawan.php?id=<?= $row['id'] ?>" class="btn btn-info btn-sm">Detail</a>
-          <a href="forms/edit_karyawan.php?id=<?= $row['id'] ?>" class="btn btn-warning btn-sm">Edit</a>
-          <a href="forms/hapus_karyawan.php?id=<?= $row['id'] ?>" class="btn btn-danger btn-sm" onclick="return confirm('Yakin ingin menghapus?')">Hapus</a>
+          <a href="forms/detail_karyawan.php?id=<?= $row['id'] ?>" class="btn btn-info btn-sm"><i class="bi bi-info-circle"></i></a>
+          <a href="forms/edit_karyawan.php?id=<?= $row['id'] ?>" class="btn btn-warning btn-sm"><i class="bi bi-pencil"></i></a>
+          <a href="forms/hapus_karyawan.php?id=<?= $row['id'] ?>" class="btn btn-danger btn-sm" onclick="return confirm('Yakin ingin menghapus?')"><i class="bi bi-trash3-fill"></i></a>
         </div>
       </div>
     </div>

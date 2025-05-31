@@ -25,13 +25,13 @@ include 'config/koneksi.php';
                 <td>
                     <div class='d-flex justify-content-center flex-wrap gap-2'>
                         <a href='forms/detail_rating.php?id={$data['id']}'>
-                            <button class='btn btn-info btn-sm px-3' type='button'>Detail</button>
+                            <button class='btn btn-info btn-sm px-3' type='button'><i class='bi bi-info-circle'></i></button>
                         </a> 
                         <a href='forms/edit_rating.php?id={$data['id']}'>
-                            <button class='btn btn-warning btn-sm px-3' type='button'>Edit</button>
+                            <button class='btn btn-warning btn-sm px-3' type='button'><i class='bi bi-pencil'></i></button>
                         </a> 
                         <a href='forms/hapus_rating.php?id={$data['id']}' onclick=\"return confirm('Yakin hapus?')\">
-                            <button class='btn btn-danger btn-sm px-3' type='button'>Hapus</button>
+                            <button class='btn btn-danger btn-sm px-3' type='button'><i class='bi bi-trash3-fill'></i></button>
                         </a>
                     </div>              
                 </td>
