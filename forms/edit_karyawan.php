@@ -67,7 +67,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <div class="mb-3">
       <label class="form-label">Jenis Kelamin</label>
       <select name="jenis_kelamin" class="form-select" required>
-        <option value="Pria" <?= $karyawan['jenis_kelamin'] == 'Pria' ? 'selected' : '' ?>>Pria</option>
+        <option value="Laki-laki" <?= $karyawan['jenis_kelamin'] == 'Laki-laki' ? 'selected' : '' ?>>Laki-laki</option>
         <option value="Perempuan" <?= $karyawan['jenis_kelamin'] == 'Perempuan' ? 'selected' : '' ?>>Perempuan</option>
       </select>
     </div>

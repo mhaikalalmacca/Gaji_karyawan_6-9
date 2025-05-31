@@ -45,7 +45,7 @@ $query = "INSERT INTO karyawan (nama, jenis_kelamin, alamat, divisi, status, umu
     <div class="mb-3">
       <label class="form-label">Jenis Kelamin</label>
       <select name="jenis_kelamin" class="form-select" required>
-        <option value="Pria">Pria</option>
+        <option value="Laki-laki">Laki-Laki</option>
         <option value="Perempuan">Perempuan</option>
       </select>
     </div>

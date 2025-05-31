@@ -32,7 +32,7 @@ function generateStars($count) {
 
   <div class="row">
   <?php while($row = mysqli_fetch_assoc($result)) : 
-    $gender = $row['jenis_kelamin'] ?? 'Pria';
+    $gender = $row['jenis_kelamin'] ?? 'Laki-laki';
     $gambar = ($gender == 'Perempuan') ? 'girl.jpg' : 'man.jpg';
     $foto = !empty($row['foto']) ? $row['foto'] : $gambar;
   ?>
