@@ -18,7 +18,6 @@ $query = "
     WHERE g.id = ?
 ";
 
-
 $stmt = $conn->prepare($query);
 if (!$stmt) {
     die("Query error: " . $conn->error);
@@ -34,6 +33,30 @@ if ($result->num_rows == 0) {
 }
 
 $data = $result->fetch_assoc();
+
+// Array mapping bulan angka ke nama bulan Indonesia
+$bulan = [
+    '01' => 'Januari',
+    '02' => 'Februari',
+    '03' => 'Maret',
+    '04' => 'April',
+    '05' => 'Mei',
+    '06' => 'Juni',
+    '07' => 'Juli',
+    '08' => 'Agustus',
+    '09' => 'September',
+    '10' => 'Oktober',
+    '11' => 'November',
+    '12' => 'Desember',
+];
+
+// Ambil bulan dan tahun dari $data['periode'] (format DATE = YYYY-MM-DD)
+$bln = substr($data['periode'], 5, 2);
+$thn = substr($data['periode'], 0, 4);
+
+// Format periode tampil nama bulan + tahun
+$periode_format = isset($bulan[$bln]) ? $bulan[$bln] . ' ' . $thn : $data['periode'];
+
 ?>
 
 <!DOCTYPE html>
@@ -75,7 +98,7 @@ $data = $result->fetch_assoc();
                 </tr>
                 <tr>
                     <th>Periode</th>
-                    <td><?= $data['periode'] ?></td>
+                    <td><?= $periode_format ?></td>
                 </tr>
                 <tr>
                     <th>Lama Lembur</th>
